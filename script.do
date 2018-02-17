@@ -32,13 +32,14 @@
 *so, when u run this do-file, make sure you use the codes for YOUR OWN computer. 
 *for Umran's computer
 clear all
-cd "~/irukandjilabs/490/data"
-use "Women_complete_3states.dta"
+cd "~/irukandjilabs/econ490"
+use "data/Women_complete_3states.dta"
 
 
 *for Doohyeun's computer
 clear all
-use "/Users/doo-hyeunroh/Downloads/Women_complete_3states.dta"
+cd "~/Documents/Github/econ490"
+use "data/Women_complete_3states.dta"
 
 
 *for Brandon's computer
@@ -57,39 +58,27 @@ clear all
 *DOO-HYEUN'S PART
 *Doo-Hyeun: caseid ~ h11b_1 (not including h11b_1)
 
-
-
-
-
-
 *UMRAN'S PART
 *Umran: H11b_1 ~ idxml_1 (not including idxml_1)
 
-
 //generate relevant variables
-generate urban = v025
-generate watertime = v115
-generate childrenever = v201
-generate children5under = v137
-generate childrenideal = v613
-generate eduyrs = v133
-generate eduyrspart = v715
 
-v025
+generate bin_urban = 0
+recode bin_urban 0 = 1 if v025 == 1
+generate time_to_water_source = v115
+generate children_ever_born = v201
+generate children_under_5 = v137
+generate ideal_children = v613
+generate education_years = v133
+generate education_years_partner = v715
 
-//not so relevant variables
-generate fpref = v602
+// generate derivative variables
+generate bin_water_on_premises = 0
+recode bin_water_on_premises 0 = 1 if watertime == 996
 
-generate wateronpremises = 0
-recode wateronpremises 0=1 if watertime == 996
-
-
+//generate not so relevant variables
+generate cat_fertility_pref = v602
 
 
 *BRANDON'S PART
 *Brandon: Idxml_1 ~ s590c_4 (including s590c_4)
-
-
-
-
-
