@@ -52,6 +52,20 @@ clear all
 *this way, we will all have the same recoded variables when doing our analysis.
 
 
+*3 PARTS - ADD IN YOUR EDITS IN YOUR OWN SECTINO, SO THEY DON'T CREATE A HUGE CONFLICT LATER WHEN WE MERGE
+
+*DOO-HYEUN'S PART
+*Doo-Hyeun: caseid ~ h11b_1 (not including h11b_1)
+
+
+
+
+
+
+*UMRAN'S PART
+*Umran: H11b_1 ~ idxml_1 (not including idxml_1)
+
+
 //generate relevant variables
 generate urban = v025
 generate watertime = v115
@@ -68,3 +82,14 @@ generate fpref = v602
 
 generate wateronpremises = 0
 recode wateronpremises 0=1 if watertime == 996
+
+
+
+
+*BRANDON'S PART
+*Brandon: Idxml_1 ~ s590c_4 (including s590c_4)
+
+
+
+
+
