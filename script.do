@@ -20,13 +20,15 @@ clear all
 use "/Users/doo-hyeunroh/Downloads/Women_complete_3states.dta"
 
 
-
 *for Brandon's computer 
 clear all
+
+
 *add your own command here Brandon
 
 
-*from now on 
+*The code from this point on, you can run using copy/paste. 
+*this way, we will all have the same recoded variables when doing our analysis. 
 
 
 //generate relevant variables
