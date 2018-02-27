@@ -29,12 +29,10 @@ clear all
 cd "~/irukandjilabs/econ490"
 use "data/Women_complete_3states.dta"
 
-
 *for Doohyeun's computer
 clear all
 cd "~/Documents/Github/econ490"
 use "data/Women_complete_3states.dta"
-
 
 *for Brandon's computer
 clear all
