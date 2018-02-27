@@ -29,10 +29,12 @@ clear all
 cd "~/irukandjilabs/econ490"
 use "data/Women_complete_3states.dta"
 
+
 *for Doohyeun's computer
 clear all
 cd "~/Documents/Github/econ490"
 use "data/Women_complete_3states.dta"
+
 
 *for Brandon's computer
 clear all
@@ -170,7 +172,6 @@ recode bin_water_on_premises 0 = 1 if watertime == 996
 generate cat_fertility_pref = v602
 
 *BRANDON'S PART
-
 *Brandon: Idxml_1 ~ s590c_4 (including s590c_4)
 
 gen antibiotic =0 (ml13n_1)
