@@ -14,9 +14,15 @@ recode yrs_edu 97=.
 * summarize education years to get the mean years of education
 summ yrs_edu
 
-* create a dummy variable for if a woman is working or has worked
+* create a dummy variable for if a woman is working or has worked in the past
+* twelve months
 gen working_worked = 0
 recode working_worked 0=1 if v731 > 0
+
+* tabulate the variable for if a woman is working or has worked in the last 12
+* months in order to work out the proportion of women who have been working or
+* have worked in the last 12 months
+tab working_worked
 
 * create a variable for whether the respondent justifies domestic violence if
 * women have been unfaithful
@@ -62,6 +68,10 @@ gen bin_sons = 0
 recode bin_sons 0=. if tot_sons == .
 recode bin_sons 0=1 if tot_sons > 0
 
+* tabulate variable for whether the woman has ever given birth to a son to get
+* the number of women who have given birth to a son
+tab bin_sons
+
 * get the correlation between whether the respondent justifies domestic
 * violence and the number of sons she has given birth to
 pwcorr just tot_sons, sig star(0.05)
@@ -74,6 +84,10 @@ pwcorr just bin_sons, sig star(0.05)
 * create a variable for whether the respondent has a say in her own health
 gen own_hlth = 0
 recode own_hlth 0=1 if v743a < 4
+
+* tabulate variable for whether the respondent has a say in her own health in
+* order to determine the proportion of women who have a say in their own health
+tab own_hlth
 
 * get correlation between whether a woman is working or has worked and whether
 * she has a say in her own health
