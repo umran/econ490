@@ -55,7 +55,7 @@ pwcorr just edu_attain, sig star(0.05)
 * create a variable for the total number of sons a woman has given birth to by
 * summing up the number of sons who are living with her, the number of sons who
 * are living away from her and the number of sons who have died
-tot_sons = v202 + v204 + v206
+gen tot_sons = v202 + v204 + v206
 
 * create a dummy variable for whether the woman has ever given birth to a son
 gen bin_sons = 0
